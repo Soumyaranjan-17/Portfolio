@@ -68,3 +68,17 @@ img {
 a {
     text-decoration: none;
 }
+
+.circle{
+    --circle-size : 10px;
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border: solid 2px white;
+    border-radius: 100%;
+    top: calc(var(--circle-size)/2 * -1);
+    left: calc(var(--circle-size)/2 * -1);
+    background-color: white;
+    box-shadow: 0px 0px 15px white;
+    pointer-events: none;
+}

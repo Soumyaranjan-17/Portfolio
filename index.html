@@ -24,13 +24,41 @@
             src="Image/WhatsApp_icon.png.webp" class="logo">WhatsApp</div>
       </a><br>
       <a target="_blank" href="upi://pay?pa=soumya017@ybl&pn=SOUMYA RANJAN&mc=0000&mode=02&purpose=00">
-        <div class="button" style="background: linear-gradient(to right, orange, white, green);"><img src="Image/pay.jpg"
-            class="logo">Tap to Pay</div>
+        <div class="button" style="background: linear-gradient(to right, orange, white, green);"><img
+            src="Image/pay.jpg" class="logo">Tap to Pay</div>
       </a><br>
       <a target="_blank" href="tel:+919337054909">
-        <div class="button" style="background: linear-gradient(to right, white, #4f5bd5);"><img src="Image/phone-icon.webp"
-            class="logo" style="mix-blend-mode: multiply;">Call Me</div>
+        <div class="button" style="background: linear-gradient(to right, white, #4f5bd5);"><img
+            src="Image/phone-icon.webp" class="logo" style="mix-blend-mode: multiply;">Call Me</div>
       </a><br>
+      <div class="circle"></div>
+
+      <script>
+        const circleElement = document.querySelector('.circle');
+
+        const mouse = { x: 0, y: 0 };
+        const circle = { x: 0, y: 0 };
+
+        window.addEventListener('mousemove', (e) => {
+          mouse.x = e.x;
+          mouse.y = e.y;
+        });
+
+        const speed = 0.15;
+        const tick = () => {
+          circle.x += (mouse.x - circle.x) * speed;
+          circle.y += (mouse.y - circle.y) * speed;
+
+          circleElement.style.transform = `translate(${circle.x}px, ${circle.y}px)`;
+
+          window.requestAnimationFrame(tick);
+
+
+
+        }
+
+        tick();
+      </script>
 
 </body>
 
