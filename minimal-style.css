@@ -1,0 +1,124 @@
+/* main::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #c6348b;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    filter: blur(8rem);
+} */
+
+/* main::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #8919e0;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    filter: blur(8rem);
+} */
+
+/* Scrollwatcher */
+
+#scroll-line {
+    width: 100vw;
+    height: 4px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-line-grow linear;
+    animation-timeline: scroll();
+    z-index: 11;
+}
+
+
+@keyframes scroll-line-grow {
+    to {
+        scale: 1 1;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+/* SOCIAL LINKS STYLE */
+
+
+.social-link-box ul {
+    display: flex;
+    justify-content: space-evenly;
+    /* outline: 1px solid ; */
+    padding: 2rem;
+}
+
+.social-link-box ul li {
+    font-size: 2.5rem;
+    line-height: 0;
+    transition: text-shadow 0.3s linear;
+    animation: flote;
+}
+
+.social-link-box ul li:nth-child(1) {
+    &:hover{
+        text-shadow: 0 0 30px #0a66c2 ;
+        color: #0a66c2;
+    }
+}
+
+.social-link-box ul li:nth-child(2) {
+    &:hover{
+        text-shadow: 0 0 30px #555555 ;
+        color: #555555;
+    }
+}
+
+.social-link-box ul li:nth-child(3) {
+    &:hover{
+        text-shadow: 0 0 30px #df1156 ;
+        color: #df1156;
+    }
+}
+
+.social-link-box ul li:nth-child(4) {
+    &:hover{
+        text-shadow: 0 0 30px #b2d438 ;
+        color: #b2d438;
+    }
+}
+
+.social-link-box ul li:nth-child(5) {
+    &:hover{
+        text-shadow: 0 0 30px #12f164 ;
+        color: #12f164;
+    }
+}
+
+/* Crouser */
+
+.circle{
+    --circle-size : 10px;
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border-radius: 100%;
+    top: calc(var(--circle-size)/2 * -1);
+    left: calc(var(--circle-size)/2 * -1);
+    pointer-events: none;
+
+    z-index: 2000;
+
+    /* filter: invert(100%); */
+}
