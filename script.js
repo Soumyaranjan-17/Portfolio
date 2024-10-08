@@ -23,7 +23,7 @@ function toggleTheme() {
   if (localStorage.getItem("theme") === "theme-dark") {
     setTheme("theme-dark"); // If previously dark, set dark theme
   } else {
-    setTheme("theme-light"); // Default to light theme
+    setTheme("theme-dark"); // Default to light theme
   }
 })();
 
@@ -62,3 +62,48 @@ const tick = () => {
 };
 
 tick();
+
+
+// LOADER
+
+
+// CODE EFFECT
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+let interval = null;
+
+document.querySelectorAll('.code').forEach(element => {
+  element.onmouseover = event => {  
+    let iteration = 0;
+    
+    // Clear any existing interval to avoid conflicts
+    clearInterval(interval);
+    
+    // Create a new interval to handle the animation
+    interval = setInterval(() => {
+      // Update the text of the target element
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration) {
+            // Return the original letter if the index is less than iteration
+            return event.target.dataset.value[index];
+          }
+          
+          // Return a random letter from A-Z
+          return letters[Math.floor(Math.random() * 52)];
+        })
+        .join("");
+      
+      // Clear the interval once all letters have been replaced
+      if(iteration >= event.target.dataset.value.length){ 
+        clearInterval(interval);
+      }
+      
+      // Increment iteration slowly to achieve the animation effect
+      iteration += 1 / 3;
+    }, 30);
+  };
+});
+
+
