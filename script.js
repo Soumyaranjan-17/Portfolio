@@ -30,7 +30,13 @@ function toggleTheme() {
 // SIDEBAR
 
 function toggleSidebar() {
-  document.querySelector(".sidebar").classList.toggle("moved-left");
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.classList.toggle("moved-left");
+  // if (sidebar.classList.contains('moved-left')) {
+  //   document.removeEventListener('click', toggleSidebar);
+  // } else {
+  //   document.addEventListener('click', toggleSidebar)
+  // }
 }
 
 // CROUSER

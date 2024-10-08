@@ -1,24 +1,33 @@
-/* main::before {
+#Hero::before {
     content: "";
-    width: 100px;
-    height: 100px;
-    background-color: #c6348b;
+    width: 200px;
+    height: 200px;
+    background-color: #860051;
     position: absolute;
     top: 10%;
-    left: 20%;
-    filter: blur(8rem);
-} */
+    left: 10%;
+    filter: blur(10rem);
+    z-index: -1;
+}
 
-/* main::after {
+#Hero::after {
     content: "";
-    width: 100px;
-    height: 100px;
-    background-color: #8919e0;
+    width: 200px;
+    height: 200px;
+    background-color: #4c0086;
     position: absolute;
-    top: 40%;
-    left: 60%;
-    filter: blur(8rem);
-} */
+    bottom: 10%;
+    right: 10%;
+    z-index: -1;
+    filter: blur(10rem);
+    transition: all ease 0.5s;
+    transform: rotateZ(-30deg);
+    transform-origin: left bottom;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
 
 /* Scrollwatcher */
 
@@ -121,4 +130,23 @@ li {
     z-index: 2000;
 
     /* filter: invert(100%); */
+}
+
+/* SCROLL DOWN */
+
+.turn-left {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    /* outline: 1px solid gray; */
+    transform: rotateZ(270deg);
+    transform-origin: left;
+    animation: fade-out linear forwards;
+    animation-timeline: view(300px);
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
 }
