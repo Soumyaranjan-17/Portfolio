@@ -23,7 +23,7 @@ function toggleTheme() {
   if (localStorage.getItem("theme") === "theme-dark") {
     setTheme("theme-dark"); // If previously dark, set dark theme
   } else {
-    setTheme("theme-dark"); // Default to light theme
+    setTheme("theme-light"); // Default to light theme
   }
 })();
 
