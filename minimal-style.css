@@ -1,3 +1,25 @@
+/* main::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #c6348b;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    filter: blur(8rem);
+} */
+
+/* main::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #8919e0;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    filter: blur(8rem);
+} */
+
 .loader {
     content: 'Hello';
     width: 100vw;
