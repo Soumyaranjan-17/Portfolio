@@ -233,10 +233,11 @@ button {
 
 section {
     min-height: 100svh;
-    outline: 2px solid cyan;
+    /* outline: 2px solid cyan; */
     position: relative;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -324,4 +325,13 @@ section {
         text-shadow: 0 0 30px #12f164;
         color: #12f164;
     }
+}
+
+#Projects{
+    position: relative;
+}
+
+.card-landscape{
+    position: sticky;
+    top: 15vh;
 }
