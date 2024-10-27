@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soumya Ranjan</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,11 +15,12 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="minimal-style.css" />
+  <link rel="stylesheet" href="skills.css">
 </head>
 
 <body>
   <div id="scroll-line"></div>
-  <!-- <div class="circle"></div> -->
+  <div class="circle"></div>
   <div class="loader">
     <h1 class="gradient-txt">...Hello...</h1>
   </div>
@@ -42,8 +42,8 @@
         <li>
           <a href="#Projects">Project</a>
         </li>
-        <li>
-          <a href="#Resume">Resume</a>
+        <li class="hidden">
+          <a href="#Skills">Skills</a>
         </li>
         <li>
           <a href="#Contact">Contact</a>
@@ -82,9 +82,9 @@
           <a target="_blank" href="#Projects"><i style="color: gray" class="ri-pencil-ruler-2-fill"></i>
             Project</a>
         </li>
-        <li>
-          <a target="_blank" href="#Resume"><i style="color: rgb(214, 12, 12)" class="ri-file-pdf-2-fill"></i>
-            Resume</a>
+        <li class="hidden">
+          <a target="_blank" href="#Skills"><i style="color: rgb(214, 12, 12)" class="ri-file-pdf-2-fill"></i>
+            Skills</a>
         </li>
         <li>
           <a target="_blank" href="#Contact"><i style="color: rgb(49, 212, 16)" class="ri-whatsapp-fill"></i>
@@ -95,20 +95,23 @@
       <h2>Clone Projects</h2>
       <ul>
         <li>
-          <a target="_blank" href="https://netfilxindia.netlify.app/"><i style="color: rgb(153, 1, 1)" class="ri-netflix-fill"></i>
+          <a target="_blank" href="https://netfilxindia.netlify.app/"><i style="color: rgb(153, 1, 1)"
+              class="ri-netflix-fill"></i>
             Netflix
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://youtbue.netlify.app/"><i style="color: rgb(177, 13, 13)" class="ri-youtube-fill"></i>
+          <a target="_blank" href="https://youtbue.netlify.app/"><i style="color: rgb(177, 13, 13)"
+              class="ri-youtube-fill"></i>
             YouTube
           </a>
         </li>
-        <!-- <li>
-          <a target="_blank" href="https://netfilxindia.netlify.app/"><i style="color: rgb(0, 211, 0)" class="ri-spotify-fill"></i>
+        <li class="hidden">
+          <a target="_blank" href="https://netfilxindia.netlify.app/"><i style="color: rgb(0, 211, 0)"
+              class="ri-spotify-fill"></i>
             Spotify
           </a>
-        </li> -->
+        </li>
       </ul>
       <h2>Works</h2>
       <ul>
@@ -132,40 +135,41 @@
         <li>
           <i style="color: gray" class="ri-pencil-ruler-2-fill"></i> Project
         </li>
-        <li><i style="color: gray" class="ri-file-pdf-2-fill"></i> Resume</li>
+        <li><i style="color: gray" class="ri-file-pdf-2-fill"></i> Skills</li>
         <li><i style="color: gray" class="ri-whatsapp-fill"></i> Contact</li>
       </ul>
     </div>
 
     <div class="lower">
-      <button><i class="ri-settings-3-line"></i></button>
+      <button onclick="toggleAnimation()"><i class="ri-settings-3-line"></i></button>
       <button><i class="ri-code-s-slash-line"></i></button>
       <button><i class="ri-terminal-fill"></i></button>
     </div>
   </div>
   <!-- sidebar -->
   <main>
-    <section id="Hero">
+    <section id="Hero" class="">
       <div class="content">
         <div class="hero-txt-box">
           <h2 class="gradient-txt">...Hello...</h2>
           <h1>
-            I'm <span class="code" data-value="Soumya">Soumya</span> <span class="code" data-value="Ranjan">Ranjan</span> Sahoo
+            I'm <span class="code" data-value="Soumya">Soumya</span> <span class="code"
+              data-value="Ranjan">Ranjan</span> Sahoo
             <i class="ri-code-s-slash-fill gradient-txt"></i>
           </h1>
-          <p style="font-family: monospace;">
+          <p style="font-family: 'Courier New', Courier, monospace;">
             Frontend <span class="hover2">Developer</span> & <span class="hover2">Cybersecurity </span>Enthusiast.
           </p>
           <br>
           <p>I create responsive, secure, and user-friendly web applications. Passionate about ethical hacking and
             solving real-world problems with code.
-
           </p>
 
           <div class="social-link-box">
             <ul>
               <li>
-                <a target="_blank" href="https://www.linkedin.com/in/soumyaranjan017/"><i class="ri-linkedin-box-fill"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/soumyaranjan017/"><i
+                    class="ri-linkedin-box-fill"></i></a>
               </li>
               <li>
                 <a target="_blank" href="https://github.com/Soumyaranjan-17"><i class="ri-github-fill"></i></a>
@@ -182,21 +186,37 @@
             </ul>
           </div>
         </div>
-        <!-- <div class="hero-img-box" style="background-image: url(Asset/2_Soumya_Potrait.png);">
-        </div> -->
-      </div>
+        <!-- DECOR -->
+        <div class="decor-container" style="display: none;">
+          <div class="decor-box" style="--data-color: #df1536"></div>
+          <div class="decor-box" style="--data-color: #00ff2a"></div>
+          <div class="decor-box" style="--data-color: transparent"></div>
+          <div class="decor-box" style="--data-color: transparent"></div>
+          <div class="decor-box" style="--data-color: yellow"></div>
+          <div class="decor-box" style="--data-color: pink"></div>
+        </div>
 
-      <div class="turn-left">
-        <i class="ri-arrow-left-circle-fill"></i>SCROLL DOWN
-      </div>
+
+        <div class="turn-left">
+          <i class="ri-arrow-left-circle-fill"></i>SCROLL DOWN
+        </div>
     </section>
-    <section id="About" style="min-height: 100vh">
-      <p>A <span class="l-1">B.Tech</span> Computer Science student with a passion for crafting <span class="l-2">web</span> experiences and <span class="l-3">securing</span> digital landscapes. From building sleek, responsive <span class="l-4">websites</span> to diving deep into the world of <span class="l-5">ethical</span> hacking, I love turning ideas into <span class="l-6">real-world</span> projects.</p>
+    <section id="About" class="">
+      <p>A <span class="l-1">B.Tech</span> Computer Science student with a passion for crafting <span
+          class="l-2">web</span> experiences and <span class="l-3">securing</span> digital landscapes. From building
+        sleek, responsive <span class="l-4">websites</span> to diving deep into the world of <span
+          class="l-5">ethical</span> hacking, I love turning ideas into <span class="l-6">real-world</span> projects.
+      </p>
       <br>
-      <p> I’m constantly pushing my boundaries in web development and cybersecurity. My goal <span class="l-7">?</span> To create <span class="l-8">secure</span> , <span class="l-9">innovative</span> solutions that make a difference. Explore my projects and let’s connect through <span class="l-10">GitHub</span> or <span class="l-11">LinkedIn</span>!</p>
+      <p> I’m constantly pushing my boundaries in web development and cybersecurity. My goal <span class="l-7">?</span>
+        To create <span class="l-8">secure</span> , <span class="l-9">innovative</span> solutions that make a
+        difference. Explore my projects and let’s connect through <span class="l-10">GitHub</span> or <span
+          class="l-11">LinkedIn</span>!</p>
     </section>
-    <section id="Projects" style="min-height: 100vh">
-      <h2>Projects</h2>
+    <section id="Projects" class="">
+      <div class="gradient-box-holder">
+        <h2 class="gradient-box">Projects</h2>
+      </div>
 
       <div class="card-container">
         <div class="card-landscape" style="background-image: url(Asset/Project-Screenshot/netflix-1.png);"></div>
@@ -205,11 +225,72 @@
         <div class="card-landscape" style="background-image: url(Asset/Project-Screenshot/Bill-Buddy-1.png);"></div>
       </div>
     </section>
-    <section id="Resume" style="min-height: 100vh">Resume</section>
-    <section id="Contact" style="min-height: 100vh">Contact</section>
+    <section id="Skills" class="hidden">
+      <div class="gradient-box-holder">
+        <h2 class="gradient-box">Skills</h2>
+      </div>
+      <div class="main-container">
+        <div class="grid-type-1">
+          <div class="box box1 clay">
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+          </div>
+          <div class="box box2 clay ">
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+          </div>
+          <div class="box box3 clay flex-vertical">
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+          </div>
+          <div class="box box4 clay flex-vertical">
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+          </div>
+          <div class="box box5 clay">
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+          </div>
+          <div class="box box6 clay">
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+          </div>
+          <div class="box box7 clay">
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+            <div class="skill-icon"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section id ="Contact" class="">
+      <!-- <div class="gradient-box-holder">
+        <h2 class="gradient-box">Let’s Connect</h2>
+      </div> -->
+      <div class="big-box">
+        <div class="form-container">
+          <div class="left">
+          </div>
+          <form method="post" class="right">
+            <label for="name">Name </label>
+            <input type="text" name="name" id="name" placeholder="John Doe">
+            <label for="email">Email address </label>
+            <input type="email" name="email" id="email" placeholder="johndoe@mail.com">
+            <label for="message">Your Words 😊</label>
+            <textarea name="message" id="message" rows="10">Hello👋</textarea>
+            <button type="">Send</button>
+          </form>
+        </div>
+      </div>
+    </section> 
   </main>
 
-  <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
   <script src="script.js"></script>
 </body>
 

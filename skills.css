@@ -1,0 +1,117 @@
+
+/* SKILLS */
+
+.main-container {
+    /* outline: solid; */
+    backdrop-filter: blur(10px);
+    /* perspective: 800px; */
+    /* Perspective for 3D effect */
+}
+
+.grid-type-1 {
+    --grid-width: 800px;
+    max-width: var(--grid-width);
+    width: 90vw;
+    aspect-ratio: 4/3;
+
+    display: grid;
+    grid-template-areas: "box1 box1 box2 box3"
+        "box4 box5 box5 box3"
+        "box4 box6 box7 box7";
+
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-type-1 {
+        grid-template-areas: "box1 box1 box1 box1"
+            "box2 box2 box2 box2"
+            "box3 box3 box3 box3"
+            "box4 box4 box4 box4"
+            "box5 box5 box5 box5"
+            "box6 box6 box6 box6"
+            "box7 box7 box7 box7"
+            ;
+
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    overflow-x: auto;
+
+}
+
+/* Different sizes and colors for each box */
+.box1 {
+    grid-area: box1;
+    background-color: #edfffe;
+}
+
+.box2 {
+    grid-area: box2;
+    background-color: #d8ffd8;
+}
+
+.box3 {
+    grid-area: box3;
+    background-color: #ddddff;
+}
+
+.box4 {
+    grid-area: box4;
+    background-color: #ffd700;
+}
+
+.box5 {
+    grid-area: box5;
+    background-color: #87ceeb;
+}
+
+.box6 {
+    grid-area: box6;
+    background-color: #fa8072;
+}
+
+.box7 {
+    grid-area: box7;
+    background-color: #dda0dd;
+}
+
+.clay {
+    backdrop-filter: blur(5px);
+    /* background-color: rgba(255, 255, 255, 1); */
+    border-radius: 1.2rem;
+    box-shadow: 9px 7px 68px 0px rgb(31 41 55 / 50%), inset -8px -8px 16px 0px rgb(0 0 0 / 20%), inset 8px 11px 20px 0px rgba(255, 255, 255, 0.2);
+}
+
+.cube {
+    transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(52deg) rotateY(157deg) rotateZ(87deg) translateX(0px) translateY(0px) translateZ(4px) skewX(0deg) skewY(0deg);
+}
+
+.cube-wrap {
+    perspective: 2000px;
+    perspective-origin: 50% 0%;
+}
+
+.skill-icon{
+    --l: 80px;
+    width: var(--l);
+    height: var(--l);
+    background-color: transparent;
+    box-shadow: inset 8px 10px 10px  rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    margin: 10px;
+
+    flex-shrink: 0;
+}
+
+.flex-vertical{
+    display: flex;
+    flex-direction: column;
+}

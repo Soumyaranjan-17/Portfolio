@@ -275,7 +275,7 @@ section {
     transition: all ease 0.5s;
 }
 
-.gradient-txt:hover{
+.gradient-txt:hover {
     letter-spacing: 5px;
 }
 
@@ -327,11 +327,116 @@ section {
     }
 }
 
-#Projects{
+#Projects {
     position: relative;
 }
 
-.card-landscape{
+.card-landscape {
     position: sticky;
     top: 15vh;
 }
+
+
+/* Contact */
+
+.big-box{
+    max-width: 800px;
+    width: 90vw;
+    height: 70vh;
+    border-radius: calc(2rem + 4px);
+    padding: 4px;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: conic-gradient(from var(--angle), #1515dd, #db1547, #db1547, #1515dd);
+        border-radius: calc(2rem + 4px);
+        height: 100%;
+        width: 100%;
+        /* scale: 1.01; */
+        /* padding: 2px; */
+        animation: autorotate 2s linear infinite;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all ease-in-out 0.3s;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        background-image: conic-gradient(from var(--angle), #1515dd, #db1547, #db1547, #1515dd);
+        height: 100%;
+        width: 100%;
+        filter: blur(20px);
+        border-radius: calc(2rem + 4px);
+        animation: autorotate 2s linear infinite;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -5;
+    }
+}
+
+.form-container{
+    overflow: hidden;
+    height: 100%;
+    
+    background-color: var(--color-secondary);
+    border-radius: 2rem;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-container{
+        grid-template-areas: "right";
+        grid-template-columns: 1fr;
+        /* background-image: url(Asset/Pic/geometric-shape-1.jpeg) ; */
+        background-position: center;
+        background-size: cover;
+        
+    }
+}
+
+.form-container .left{
+    grid-area: left;
+    background-image: url(Asset/Pic/illusion-square.png);
+    
+    background-position: center;
+    background-size: cover;
+}
+
+form{
+    /* background-color: rgba(22, 216, 200, 0.349); */
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, textarea{
+    padding: 1rem;
+    width: 80%;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 10px ;
+    margin: 10px;
+    outline: solid 2px var(--color-primary);
+    /* background-color: transparent; */
+
+    &:active{
+        border: none;
+    }
+
+}
+form button{
+    width: 80%;
+    border-radius: 1rem;
+}
+
