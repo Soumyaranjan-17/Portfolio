@@ -342,7 +342,7 @@ section {
 .big-box{
     max-width: 800px;
     width: 90vw;
-    height: 70vh;
+    min-height: 70vh;
     border-radius: calc(2rem + 4px);
     padding: 4px;
     position: relative;

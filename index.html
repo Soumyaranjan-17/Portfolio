@@ -269,7 +269,7 @@
       </div>
 
     </section>
-    <section id ="Contact" class="">
+    <section id="Contact" class="">
       <!-- <div class="gradient-box-holder">
         <h2 class="gradient-box">Let’s Connect</h2>
       </div> -->
@@ -277,18 +277,25 @@
         <div class="form-container">
           <div class="left">
           </div>
-          <form method="post" class="right">
+          <form action="https://api.web3forms.com/submit" method="POST" class="right">
+            <input type="hidden" name="access_key" value="7a6ab6d1-6061-4cc2-906d-8c042867a63e">
+            <!-- I am not learned how to protect the API keys, that is why this is available here, But I think this is not so important to hide 'THIS' API KEY -->
             <label for="name">Name </label>
-            <input type="text" name="name" id="name" placeholder="John Doe">
+            <input type="text" name="name" id="name" placeholder="John Doe" required>
             <label for="email">Email address </label>
-            <input type="email" name="email" id="email" placeholder="johndoe@mail.com">
+            <input type="email" name="email" id="email" placeholder="johndoe@mail.com" required>
             <label for="message">Your Words 😊</label>
-            <textarea name="message" id="message" rows="10">Hello👋</textarea>
-            <button type="">Send</button>
+            <textarea name="message" id="message" rows="10" required>Hello👋</textarea>
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+
+            <button type="submit">Send 🚀</button>
           </form>
         </div>
       </div>
-    </section> 
+    </section>
   </main>
 
   <script src="script.js"></script>
